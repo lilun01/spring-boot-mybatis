@@ -24,11 +24,16 @@ public class ExportController {
 		exportService.export(response);
 
 	}
-	
+
+	@GetMapping("/getWorkBookRowNum")
+	public int getWorkBookRowNum() throws Exception {
+		return exportService.getWorkBookRowNum();
+	}
+
 	@GetMapping("/exportToLocal")
 	public void exportToLocal() throws Exception {
 		exportService.exportToLocal();
-		
+
 	}
 
 }
